@@ -11,34 +11,37 @@ public class ExcersicesJ8 {
 
     //I'm still working in this excersises
 
-    public Boolean isAPrimeNumber(int number) {
+    public String isAPrimeNumber(int number) {
+        try {
+            IntStream intex = IntStream.of(1, 2, 3);
 
-        System.out.println(number);
-        Boolean result = number > 1 && IntStream.range(2, number).noneMatch(i -> number % 1 == 0);
-        System.out.println(result);
-        return result;
+            return ((true == number > 1 && IntStream.range(2, number).noneMatch(i -> number % i == 0)) ? "Is a prime number" : "Is not a prime number");
+
+        }catch(Exception e)
+        {
+            return "Error";
+        }
     }
 
-    public Boolean isAnAnagram(String word1, String word2)
+    public String isAnAnagram(String word1, String word2)
     {
-        if(word1.length() != word2.length())
-            return false;
+        try {
+            if (word1.length() != word2.length())
+                return "Is not an anagram";
 
-        word1 = word1.toLowerCase(Locale.ROOT);
-        word2 = word2.toLowerCase(Locale.ROOT);
+            word1 = word1.toLowerCase(Locale.ROOT);
+            word2 = word2.toLowerCase(Locale.ROOT);
 
-        char[] cword1 = word1.toCharArray();
-        char[] cword2 = word2.toCharArray();
+            char[] cword1 = word1.toCharArray();
+            char[] cword2 = word2.toCharArray();
 
-        Arrays.sort(cword1);
-        Arrays.sort(cword2);
+            Arrays.sort(cword1);
+            Arrays.sort(cword2);
 
-        System.out.println("Palabra 1: " + Arrays.toString(cword1) + " Palabra 2: " + Arrays.toString(cword2));
-
-        //if(Arrays.equals(cword1, cword2))
-        if(Arrays.toString(cword1).equalsIgnoreCase(Arrays.toString(cword2)))
-            return true;
-        else return false;
-
+            return Arrays.equals(cword1, cword2) ? "Is an anagram" : "Is not an anagram";
+        }catch(Exception e)
+        {
+            return "Error";
+        }
     }
 }
