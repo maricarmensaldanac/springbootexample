@@ -3,7 +3,7 @@ package com.example.demo.controller;
 import com.example.demo.exception.ApiRequestException;
 import com.example.demo.model.Book;
 import com.example.demo.service.BookService;
-import com.example.demo.ExcersicesJ8;
+import com.example.demo.service.ExcersicesJ8;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,4 +1,4 @@
-package com.example.demo.combinattorpattern;
+package com.example.demo.combinatorpattern;
 
 import java.time.LocalDate;
 

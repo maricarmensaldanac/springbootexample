@@ -1,4 +1,4 @@
-package com.example.demo.Consumer;
+package com.example.demo.functionalProgramming;
 
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;

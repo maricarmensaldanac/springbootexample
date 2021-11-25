@@ -1,4 +1,5 @@
-package com.example.demo;
+package com.example.demo.enumerator;
 
-enum Gender {
+public enum Gender {
+    MALE,FEMALE,PREFERENOTTOSAY
 }

@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.service;
 
 import org.springframework.stereotype.Service;
 
@@ -15,7 +15,7 @@ public class ExcersicesJ8 {
         try {
             IntStream intex = IntStream.of(1, 2, 3);
 
-            return ((true == number > 1 && IntStream.range(2, number).noneMatch(i -> number % i == 0)) ? "Is a prime number" : "Is not a prime number");
+            return ((true == number > 1 && IntStream.range(2, number/2).noneMatch(i -> number % i == 0)) ? "Is a prime number" : "Is not a prime number");
 
         }catch(Exception e)
         {
